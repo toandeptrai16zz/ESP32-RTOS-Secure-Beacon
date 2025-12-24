@@ -17,16 +17,8 @@ Hệ thống cảnh báo khoảng cách và xác thực bảo mật không dây 
 - TRAM_THU_STATION: Code cho mạch thu (Station).
 
 ## Cấu hình (File SecureConfig.h)
-Lưu ý: File này phải giống hệt nhau ở cả 2 mạch.
+Lưu ý: File này phải giống hệt nhau ở cả 2 mạch. Vì đây là chìa khóa bảo mật chung.
 
-const String SECRET_KEY = "ESP32_VIP_KEY_2025"; 
-const String DEVICE_NAME = "ESP32_TAG"; 
-#define SERVICE_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-
-const int RSSI_THRESHOLD_NEAR = -60; // Ngưỡng Gần
-const int RSSI_THRESHOLD_FAR  = -75; // Ngưỡng Xa
-
-## Hướng dẫn sử dụng
 1. Cài đặt Arduino IDE và thêm thư viện ESP32.  
 2. Mở project TRAM_PHAT_TAG, cấu hình SecureConfig.h và tải lên mạch phát.
 3. Mở project TRAM_THU_STATION, cấu hình SecureConfig.h và tải lên mạch thu.
